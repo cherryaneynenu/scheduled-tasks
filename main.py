@@ -3,9 +3,10 @@ import smtplib
 import pandas
 import random
 import time
+import os
 
-email = "cherryaneynenu@gmail.com"
-password = "eneqqjpekfnyimhg"
+email = os.environ.get("MY_EMAIL")
+password = os.environ.get("MY_PASSWORD")
 
 today = (dt.datetime.now().month, dt.datetime.now().day)
 data = pandas.read_csv("birthdays.csv")
